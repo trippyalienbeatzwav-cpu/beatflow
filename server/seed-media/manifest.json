@@ -1,0 +1,522 @@
+{
+  "generated_at": "2026-09-25T18:33:34.339Z",
+  "images": {
+    "avatar_0": {
+      "file": "images/avatar_0.webp",
+      "w": 400,
+      "h": 400
+    },
+    "avatar_1": {
+      "file": "images/avatar_1.webp",
+      "w": 400,
+      "h": 400
+    },
+    "avatar_2": {
+      "file": "images/avatar_2.webp",
+      "w": 400,
+      "h": 400
+    },
+    "avatar_3": {
+      "file": "images/avatar_3.webp",
+      "w": 400,
+      "h": 400
+    },
+    "avatar_4": {
+      "file": "images/avatar_4.webp",
+      "w": 400,
+      "h": 400
+    },
+    "avatar_5": {
+      "file": "images/avatar_5.webp",
+      "w": 400,
+      "h": 400
+    },
+    "avatar_6": {
+      "file": "images/avatar_6.webp",
+      "w": 400,
+      "h": 400
+    },
+    "avatar_7": {
+      "file": "images/avatar_7.webp",
+      "w": 400,
+      "h": 400
+    },
+    "avatar_8": {
+      "file": "images/avatar_8.webp",
+      "w": 400,
+      "h": 400
+    },
+    "avatar_9": {
+      "file": "images/avatar_9.webp",
+      "w": 400,
+      "h": 400
+    },
+    "avatar_10": {
+      "file": "images/avatar_10.webp",
+      "w": 400,
+      "h": 400
+    },
+    "avatar_11": {
+      "file": "images/avatar_11.webp",
+      "w": 400,
+      "h": 400
+    },
+    "avatar_12": {
+      "file": "images/avatar_12.webp",
+      "w": 400,
+      "h": 400
+    },
+    "avatar_13": {
+      "file": "images/avatar_13.webp",
+      "w": 400,
+      "h": 400
+    },
+    "avatar_14": {
+      "file": "images/avatar_14.webp",
+      "w": 400,
+      "h": 400
+    },
+    "avatar_15": {
+      "file": "images/avatar_15.webp",
+      "w": 400,
+      "h": 400
+    },
+    "cover_0": {
+      "file": "images/cover_0.webp",
+      "w": 1500,
+      "h": 500
+    },
+    "cover_1": {
+      "file": "images/cover_1.webp",
+      "w": 1500,
+      "h": 500
+    },
+    "cover_2": {
+      "file": "images/cover_2.webp",
+      "w": 1500,
+      "h": 500
+    },
+    "cover_3": {
+      "file": "images/cover_3.webp",
+      "w": 1500,
+      "h": 500
+    },
+    "cover_4": {
+      "file": "images/cover_4.webp",
+      "w": 1500,
+      "h": 500
+    },
+    "cover_5": {
+      "file": "images/cover_5.webp",
+      "w": 1500,
+      "h": 500
+    },
+    "cover_6": {
+      "file": "images/cover_6.webp",
+      "w": 1500,
+      "h": 500
+    },
+    "cover_7": {
+      "file": "images/cover_7.webp",
+      "w": 1500,
+      "h": 500
+    },
+    "post_0": {
+      "file": "images/post_0.webp",
+      "w": 1080,
+      "h": 1080,
+      "scene": "waves"
+    },
+    "post_1": {
+      "file": "images/post_1.webp",
+      "w": 1080,
+      "h": 1350,
+      "scene": "vinyl"
+    },
+    "post_2": {
+      "file": "images/post_2.webp",
+      "w": 1080,
+      "h": 1350,
+      "scene": "synth"
+    },
+    "post_3": {
+      "file": "images/post_3.webp",
+      "w": 1080,
+      "h": 1080,
+      "scene": "blobs"
+    },
+    "post_4": {
+      "file": "images/post_4.webp",
+      "w": 1080,
+      "h": 1350,
+      "scene": "bars"
+    },
+    "post_5": {
+      "file": "images/post_5.webp",
+      "w": 1080,
+      "h": 1350,
+      "scene": "rings"
+    },
+    "post_6": {
+      "file": "images/post_6.webp",
+      "w": 1080,
+      "h": 1080,
+      "scene": "halftone"
+    },
+    "post_7": {
+      "file": "images/post_7.webp",
+      "w": 1080,
+      "h": 1350,
+      "scene": "mixer"
+    },
+    "post_8": {
+      "file": "images/post_8.webp",
+      "w": 1080,
+      "h": 1350,
+      "scene": "grid"
+    },
+    "post_9": {
+      "file": "images/post_9.webp",
+      "w": 1080,
+      "h": 1080,
+      "scene": "sun"
+    },
+    "post_10": {
+      "file": "images/post_10.webp",
+      "w": 1080,
+      "h": 1350,
+      "scene": "waves"
+    },
+    "post_11": {
+      "file": "images/post_11.webp",
+      "w": 1080,
+      "h": 1350,
+      "scene": "vinyl"
+    },
+    "post_12": {
+      "file": "images/post_12.webp",
+      "w": 1080,
+      "h": 1080,
+      "scene": "synth"
+    },
+    "post_13": {
+      "file": "images/post_13.webp",
+      "w": 1080,
+      "h": 1350,
+      "scene": "blobs"
+    },
+    "post_14": {
+      "file": "images/post_14.webp",
+      "w": 1080,
+      "h": 1350,
+      "scene": "bars"
+    },
+    "post_15": {
+      "file": "images/post_15.webp",
+      "w": 1080,
+      "h": 1080,
+      "scene": "rings"
+    },
+    "post_16": {
+      "file": "images/post_16.webp",
+      "w": 1080,
+      "h": 1350,
+      "scene": "halftone"
+    },
+    "post_17": {
+      "file": "images/post_17.webp",
+      "w": 1080,
+      "h": 1350,
+      "scene": "mixer"
+    },
+    "post_18": {
+      "file": "images/post_18.webp",
+      "w": 1080,
+      "h": 1080,
+      "scene": "grid"
+    },
+    "post_19": {
+      "file": "images/post_19.webp",
+      "w": 1080,
+      "h": 1350,
+      "scene": "sun"
+    },
+    "post_20": {
+      "file": "images/post_20.webp",
+      "w": 1080,
+      "h": 1350,
+      "scene": "waves"
+    },
+    "post_21": {
+      "file": "images/post_21.webp",
+      "w": 1080,
+      "h": 1080,
+      "scene": "vinyl"
+    },
+    "post_22": {
+      "file": "images/post_22.webp",
+      "w": 1080,
+      "h": 1350,
+      "scene": "synth"
+    },
+    "post_23": {
+      "file": "images/post_23.webp",
+      "w": 1080,
+      "h": 1350,
+      "scene": "blobs"
+    },
+    "post_24": {
+      "file": "images/post_24.webp",
+      "w": 1080,
+      "h": 1080,
+      "scene": "bars"
+    },
+    "post_25": {
+      "file": "images/post_25.webp",
+      "w": 1080,
+      "h": 1350,
+      "scene": "rings"
+    },
+    "post_26": {
+      "file": "images/post_26.webp",
+      "w": 1080,
+      "h": 1350,
+      "scene": "halftone"
+    },
+    "post_27": {
+      "file": "images/post_27.webp",
+      "w": 1080,
+      "h": 1080,
+      "scene": "mixer"
+    },
+    "post_28": {
+      "file": "images/post_28.webp",
+      "w": 1080,
+      "h": 1350,
+      "scene": "grid"
+    },
+    "post_29": {
+      "file": "images/post_29.webp",
+      "w": 1080,
+      "h": 1350,
+      "scene": "sun"
+    },
+    "post_30": {
+      "file": "images/post_30.webp",
+      "w": 1080,
+      "h": 1080,
+      "scene": "waves"
+    },
+    "post_31": {
+      "file": "images/post_31.webp",
+      "w": 1080,
+      "h": 1350,
+      "scene": "vinyl"
+    },
+    "post_32": {
+      "file": "images/post_32.webp",
+      "w": 1080,
+      "h": 1350,
+      "scene": "synth"
+    },
+    "post_33": {
+      "file": "images/post_33.webp",
+      "w": 1080,
+      "h": 1080,
+      "scene": "blobs"
+    },
+    "post_34": {
+      "file": "images/post_34.webp",
+      "w": 1080,
+      "h": 1350,
+      "scene": "bars"
+    },
+    "post_35": {
+      "file": "images/post_35.webp",
+      "w": 1080,
+      "h": 1350,
+      "scene": "rings"
+    },
+    "story_0": {
+      "file": "images/story_0.webp",
+      "w": 1080,
+      "h": 1920
+    },
+    "story_1": {
+      "file": "images/story_1.webp",
+      "w": 1080,
+      "h": 1920
+    },
+    "story_2": {
+      "file": "images/story_2.webp",
+      "w": 1080,
+      "h": 1920
+    },
+    "story_3": {
+      "file": "images/story_3.webp",
+      "w": 1080,
+      "h": 1920
+    },
+    "story_4": {
+      "file": "images/story_4.webp",
+      "w": 1080,
+      "h": 1920
+    },
+    "story_5": {
+      "file": "images/story_5.webp",
+      "w": 1080,
+      "h": 1920
+    },
+    "story_6": {
+      "file": "images/story_6.webp",
+      "w": 1080,
+      "h": 1920
+    },
+    "story_7": {
+      "file": "images/story_7.webp",
+      "w": 1080,
+      "h": 1920
+    },
+    "story_8": {
+      "file": "images/story_8.webp",
+      "w": 1080,
+      "h": 1920
+    },
+    "story_9": {
+      "file": "images/story_9.webp",
+      "w": 1080,
+      "h": 1920
+    },
+    "thumb_0": {
+      "file": "images/thumb_0.webp",
+      "w": 1280,
+      "h": 720
+    },
+    "thumb_1": {
+      "file": "images/thumb_1.webp",
+      "w": 1280,
+      "h": 720
+    },
+    "thumb_2": {
+      "file": "images/thumb_2.webp",
+      "w": 1280,
+      "h": 720
+    },
+    "thumb_3": {
+      "file": "images/thumb_3.webp",
+      "w": 1280,
+      "h": 720
+    },
+    "thumb_4": {
+      "file": "images/thumb_4.webp",
+      "w": 1280,
+      "h": 720
+    }
+  },
+  "videos": {
+    "reel_0": {
+      "file": "videos/reel_0.webm",
+      "poster": "images/reel_0_poster.webp",
+      "w": 540,
+      "h": 960,
+      "duration_ms": 7000,
+      "bpm": 124
+    },
+    "reel_1": {
+      "file": "videos/reel_1.webm",
+      "poster": "images/reel_1_poster.webp",
+      "w": 540,
+      "h": 960,
+      "duration_ms": 7000,
+      "bpm": 96
+    },
+    "reel_2": {
+      "file": "videos/reel_2.webm",
+      "poster": "images/reel_2_poster.webp",
+      "w": 540,
+      "h": 960,
+      "duration_ms": 6000,
+      "bpm": 140
+    },
+    "reel_3": {
+      "file": "videos/reel_3.webm",
+      "poster": "images/reel_3_poster.webp",
+      "w": 540,
+      "h": 960,
+      "duration_ms": 8000,
+      "bpm": 110
+    },
+    "reel_4": {
+      "file": "videos/reel_4.webm",
+      "poster": "images/reel_4_poster.webp",
+      "w": 540,
+      "h": 960,
+      "duration_ms": 6000,
+      "bpm": 128
+    },
+    "reel_5": {
+      "file": "videos/reel_5.webm",
+      "poster": "images/reel_5_poster.webp",
+      "w": 540,
+      "h": 960,
+      "duration_ms": 7000,
+      "bpm": 88
+    },
+    "reel_6": {
+      "file": "videos/reel_6.webm",
+      "poster": "images/reel_6_poster.webp",
+      "w": 540,
+      "h": 960,
+      "duration_ms": 6000,
+      "bpm": 112
+    },
+    "reel_7": {
+      "file": "videos/reel_7.webm",
+      "poster": "images/reel_7_poster.webp",
+      "w": 540,
+      "h": 960,
+      "duration_ms": 7000,
+      "bpm": 132
+    },
+    "reel_8": {
+      "file": "videos/reel_8.webm",
+      "poster": "images/reel_8_poster.webp",
+      "w": 540,
+      "h": 960,
+      "duration_ms": 6000,
+      "bpm": 100
+    },
+    "reel_9": {
+      "file": "videos/reel_9.webm",
+      "poster": "images/reel_9_poster.webp",
+      "w": 540,
+      "h": 960,
+      "duration_ms": 7000,
+      "bpm": 122
+    },
+    "video_0": {
+      "file": "videos/video_0.webm",
+      "poster": "images/video_0_poster.webp",
+      "w": 720,
+      "h": 720,
+      "duration_ms": 6000,
+      "bpm": 90
+    },
+    "video_1": {
+      "file": "videos/video_1.webm",
+      "poster": "images/video_1_poster.webp",
+      "w": 720,
+      "h": 720,
+      "duration_ms": 6000,
+      "bpm": 120
+    },
+    "storyvid_0": {
+      "file": "videos/storyvid_0.webm",
+      "poster": "images/storyvid_0_poster.webp",
+      "w": 540,
+      "h": 960,
+      "duration_ms": 5000,
+      "bpm": 118
+    }
+  }
+}

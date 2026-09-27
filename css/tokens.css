@@ -1,0 +1,183 @@
+/* ==========================================================================
+   TUNIBEAT — Design tokens
+   Three layers: primitive → semantic → component.
+   Components only ever reference semantic/component tokens, never primitives.
+   ========================================================================== */
+
+:root {
+  color-scheme: dark;
+
+  /* ---------- Primitive: neutrals (cool charcoal, slight blue cast) ---------- */
+  --n-950: #070709;
+  --n-925: #0a0a0c;
+  --n-900: #0f0f12;
+  --n-875: #121216;
+  --n-850: #17171c;
+  --n-800: #1d1d23;
+  --n-750: #24242b;
+  --n-700: #2d2d35;
+  --n-600: #3b3b45;
+  --n-500: #5a5a66;
+  --n-400: #82828e;
+  --n-300: #a4a4af;
+  --n-200: #c9c9d1;
+  --n-100: #e6e6eb;
+  --n-50:  #f5f5f7;
+
+  /* ---------- Primitive: brand ---------- */
+  --violet-300: #c4b1ff;
+  --violet-400: #a98bff;
+  --violet-500: #8d68ff;
+  --violet-600: #7b4dff;   /* white text on this = 4.8:1 */
+  --violet-700: #6536f0;
+  --violet-900: #22174a;
+  --cyan-400: #5fe0f7;
+  --cyan-500: #36cbe8;
+  --cyan-900: #0d2e36;
+
+  /* ---------- Primitive: status ---------- */
+  --green-400: #3ddc84;
+  --green-900: #0e2a1b;
+  --amber-400: #f5b441;
+  --amber-900: #2e2210;
+  --red-400:   #ff5d5d;
+  --red-500:   #ef4444;
+  --red-900:   #331314;
+
+  /* ---------- Semantic: surfaces ---------- */
+  --bg:           var(--n-925);
+  --bg-sunken:    var(--n-950);
+  --surface-1:    var(--n-875);   /* cards, panels */
+  --surface-2:    var(--n-850);   /* raised: inputs, hovered cards */
+  --surface-3:    var(--n-800);   /* popovers, menus */
+  --surface-4:    var(--n-750);   /* pressed / selected */
+  --overlay:      rgba(4, 4, 6, 0.72);
+
+  /* ---------- Semantic: borders ---------- */
+  --border:        #22222a;
+  --border-strong: #33333d;
+  --border-focus:  var(--violet-400);
+
+  /* ---------- Semantic: text (contrast measured on --bg) ---------- */
+  --text:         var(--n-50);    /* 18.2:1 */
+  --text-2:       var(--n-300);   /* 8.3:1  */
+  --text-3:       var(--n-400);   /* 5.3:1  — min for metadata */
+  --text-disabled:var(--n-500);
+  --text-on-accent: #ffffff;
+
+  /* ---------- Semantic: accent ---------- */
+  --accent:        var(--violet-600);
+  --accent-hover:  var(--violet-500);
+  --accent-press:  var(--violet-700);
+  --accent-text:   var(--violet-400); /* links / accent text on dark: 7.1:1 */
+  --accent-soft:   rgba(123, 77, 255, 0.14);
+  --accent-line:   rgba(169, 139, 255, 0.35);
+  --accent-2:      var(--cyan-500);
+  --accent-2-soft: rgba(54, 203, 232, 0.12);
+
+  /* The one sanctioned gradient: signal flow (waveform progress, brand mark) */
+  --flow: linear-gradient(90deg, var(--violet-500) 0%, var(--cyan-400) 100%);
+
+  /* ---------- Semantic: status ---------- */
+  --success:      var(--green-400);
+  --success-soft: var(--green-900);
+  --warning:      var(--amber-400);
+  --warning-soft: var(--amber-900);
+  --danger:       var(--red-400);
+  --danger-soft:  var(--red-900);
+  --info:         var(--cyan-500);
+  --info-soft:    var(--cyan-900);
+
+  /* ---------- Chart series (validated dark-mode categorical slots 1–4) ---------- */
+  --series-1: #3987e5;
+  --series-2: #d95926;
+  --series-3: #199e70;
+  --series-4: #c98500;
+  --chart-grid: #1f1f26;
+  --chart-axis: var(--n-400);
+
+  /* ---------- Typography ---------- */
+  --font-display: "Archivo", "Inter", system-ui, sans-serif;
+  --font-body:    "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono:    "JetBrains Mono", ui-monospace, "SFMono-Regular", Consolas, monospace;
+
+  /* display width: Archivo's wdth axis gives the brand its wide, poster-like voice */
+  --display-stretch: 118%;
+
+  --fs-12: 0.75rem;
+  --fs-13: 0.8125rem;
+  --fs-14: 0.875rem;
+  --fs-15: 0.9375rem;
+  --fs-16: 1rem;
+  --fs-18: 1.125rem;
+  --fs-20: 1.25rem;
+  --fs-24: 1.5rem;
+  --fs-30: 1.875rem;
+  --fs-36: 2.25rem;
+  --fs-48: 3rem;
+  --fs-hero: clamp(1.85rem, 7.4vw, 5.75rem);
+
+  --lh-tight: 1.02;
+  --lh-snug:  1.2;
+  --lh-body:  1.55;
+
+  /* ---------- Space (4px base) ---------- */
+  --s-1: 4px;
+  --s-2: 8px;
+  --s-3: 12px;
+  --s-4: 16px;
+  --s-5: 20px;
+  --s-6: 24px;
+  --s-8: 32px;
+  --s-10: 40px;
+  --s-12: 48px;
+  --s-16: 64px;
+  --s-20: 80px;
+  --s-24: 96px;
+
+  --gutter: clamp(16px, 3.2vw, 40px);
+  --maxw: 1440px;
+
+  /* ---------- Radius: deliberately tight — hardware, not bubblegum ---------- */
+  --r-xs: 3px;
+  --r-sm: 5px;
+  --r-md: 8px;
+  --r-lg: 12px;
+  --r-full: 999px;
+
+  /* ---------- Elevation (dark UI: borders do most of the work) ---------- */
+  --shadow-1: 0 1px 0 rgba(255,255,255,0.03) inset, 0 1px 2px rgba(0,0,0,0.4);
+  --shadow-2: 0 8px 24px -8px rgba(0,0,0,0.6), 0 2px 6px rgba(0,0,0,0.3);
+  --shadow-3: 0 24px 64px -16px rgba(0,0,0,0.75), 0 0 0 1px var(--border-strong);
+
+  /* ---------- Motion ---------- */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --t-fast: 120ms;
+  --t-base: 180ms;
+  --t-slow: 320ms;
+
+  /* ---------- Layout constants ---------- */
+  --header-h: 64px;
+  --player-h: 84px;
+  --mobile-nav-h: 64px;
+  --mini-player-h: 60px;
+  --sidebar-w: 248px;
+
+  --z-header: 40;
+  --z-player: 50;
+  --z-nav: 55;
+  --z-drawer: 70;
+  --z-modal: 80;
+  --z-toast: 90;
+  --z-tooltip: 95;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --t-fast: 0ms;
+    --t-base: 0ms;
+    --t-slow: 0ms;
+  }
+}

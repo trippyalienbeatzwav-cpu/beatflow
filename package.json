@@ -1,0 +1,35 @@
+{
+  "name": "tunibeat",
+  "version": "1.0.0",
+  "private": true,
+  "description": "TUNIBEAT: Beats Store, Electronic Music Store and TUNIBEAT Social on one platform.",
+  "type": "module",
+  "engines": {
+    "node": ">=22.13"
+  },
+  "scripts": {
+    "start": "node --disable-warning=ExperimentalWarning server/index.js",
+    "dev": "node --disable-warning=ExperimentalWarning --watch-path=server server/index.js",
+    "seed": "node --disable-warning=ExperimentalWarning server/seed.js --reset",
+    "seed:media": "node scripts/gen-seed-media.mjs",
+    "test": "node --disable-warning=ExperimentalWarning --test --test-concurrency=1 \"tests/unit/*.test.js\" \"tests/api/*.test.js\"",
+    "test:e2e": "node --disable-warning=ExperimentalWarning --test --test-concurrency=1 \"tests/e2e/*.test.js\"",
+    "test:all": "npm run lint && npm run typecheck && npm test && npm run test:e2e && npm run build",
+    "lint": "eslint server tests scripts js eslint.config.js",
+    "typecheck": "tsc -p jsconfig.json",
+    "build": "node scripts/build.mjs"
+  },
+  "dependencies": {
+    "@breezystack/lamejs": "^1.2.7",
+    "ws": "^8.21.3"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.5",
+    "@types/node": "^22.20.4",
+    "@types/ws": "^8.18.1",
+    "eslint": "^9.39.5",
+    "globals": "^15.15.0",
+    "playwright-core": "^1.63.0",
+    "typescript": "^5.9.3"
+  }
+}

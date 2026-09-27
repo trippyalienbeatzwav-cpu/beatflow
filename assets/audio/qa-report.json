@@ -1,0 +1,1095 @@
+{
+  "summary": {
+    "generated_at": "2026-09-25T19:19:36.788Z",
+    "tracks": 57,
+    "bpmExact": 53,
+    "keyExact": 25,
+    "dropWithin1Bar": 52,
+    "maxClipLagSamples": 4
+  },
+  "tracks": [
+    {
+      "id": "t1",
+      "family": "techno",
+      "metaBpm": 132,
+      "bpm": 132,
+      "bpmMatch": true,
+      "metaKey": "A min",
+      "key": "A maj",
+      "keyMatch": false,
+      "dropBarError": 0,
+      "sections": "intro@0 build@32 drop@40 breakdown@104 build@120 drop@128 outro@220",
+      "planned": "intro@0 build@32 drop@40 breakdown@104 build@120 drop@128 outro@205",
+      "clipLagSamples": 0,
+      "confidence": 0.54,
+      "ms": {
+        "render": 3236,
+        "analyse": 4310
+      }
+    },
+    {
+      "id": "t2",
+      "family": "techno",
+      "metaBpm": 131,
+      "bpm": 131,
+      "bpmMatch": true,
+      "metaKey": "F min",
+      "key": "B♭ min",
+      "keyMatch": false,
+      "dropBarError": 0,
+      "sections": "intro@0 build@24 drop@32 breakdown@96 build@112 drop@120 outro@208",
+      "planned": "intro@0 build@24 drop@32 breakdown@96 build@112 drop@120 outro@198",
+      "clipLagSamples": 0,
+      "confidence": 0.59,
+      "ms": {
+        "render": 2975,
+        "analyse": 3932
+      }
+    },
+    {
+      "id": "t3",
+      "family": "techno",
+      "metaBpm": 130,
+      "bpm": 130,
+      "bpmMatch": true,
+      "metaKey": "D min",
+      "key": "D min",
+      "keyMatch": true,
+      "dropBarError": 0,
+      "sections": "intro@0 build@24 drop@32 breakdown@104 build@120 drop@128 outro@220",
+      "planned": "intro@0 build@24 drop@32 breakdown@104 build@120 drop@128 outro@206",
+      "clipLagSamples": 0,
+      "confidence": 0.57,
+      "ms": {
+        "render": 3039,
+        "analyse": 4213
+      }
+    },
+    {
+      "id": "t4",
+      "family": "techno",
+      "metaBpm": 133,
+      "bpm": 133,
+      "bpmMatch": true,
+      "metaKey": "G min",
+      "key": "B♭ min",
+      "keyMatch": false,
+      "dropBarError": 0,
+      "sections": "intro@0 build@24 drop@32 breakdown@96 build@112 drop@120 outro@204 silence@216",
+      "planned": "intro@0 build@24 drop@32 breakdown@96 build@112 drop@120 outro@192",
+      "clipLagSamples": 0,
+      "confidence": 0.61,
+      "ms": {
+        "render": 2737,
+        "analyse": 3693
+      }
+    },
+    {
+      "id": "t5",
+      "family": "techno",
+      "metaBpm": 124,
+      "bpm": 124,
+      "bpmMatch": true,
+      "metaKey": "F min",
+      "key": "B♭ min",
+      "keyMatch": false,
+      "dropBarError": 0,
+      "sections": "intro@0 build@24 drop@32 breakdown@104 build@120 drop@128 outro@216",
+      "planned": "intro@0 build@24 drop@32 breakdown@104 build@120 drop@128 outro@205",
+      "clipLagSamples": 0,
+      "confidence": 0.62,
+      "ms": {
+        "render": 2791,
+        "analyse": 4452
+      }
+    },
+    {
+      "id": "t6",
+      "family": "techno",
+      "metaBpm": 124,
+      "bpm": 124,
+      "bpmMatch": true,
+      "metaKey": "F min",
+      "key": "B♭ min",
+      "keyMatch": false,
+      "dropBarError": 0,
+      "sections": "intro@0 build@32 drop@40 breakdown@120 build@136 drop@144 outro@252 silence@268",
+      "planned": "intro@0 build@32 drop@40 breakdown@120 build@136 drop@144 outro@236",
+      "clipLagSamples": 0,
+      "confidence": 0.55,
+      "ms": {
+        "render": 3520,
+        "analyse": 5254
+      }
+    },
+    {
+      "id": "t7",
+      "family": "trance",
+      "metaBpm": 138,
+      "bpm": 138.01,
+      "bpmMatch": true,
+      "metaKey": "F min",
+      "key": "C♯ maj",
+      "keyMatch": false,
+      "dropBarError": 0,
+      "sections": "intro@0 build@32 drop@40 breakdown@112 build@128 drop@136 outro@228",
+      "planned": "intro@0 build@32 drop@40 breakdown@112 build@128 drop@136 outro@210",
+      "clipLagSamples": 4,
+      "confidence": 0.61,
+      "ms": {
+        "render": 3033,
+        "analyse": 4169
+      }
+    },
+    {
+      "id": "t8",
+      "family": "techno",
+      "metaBpm": 150,
+      "bpm": 150,
+      "bpmMatch": true,
+      "metaKey": "F min",
+      "key": "B♭ min",
+      "keyMatch": false,
+      "dropBarError": 0,
+      "sections": "intro@0 build@36 drop@40 breakdown@104 build@120 drop@128 outro@220",
+      "planned": "intro@0 build@32 drop@40 breakdown@104 build@120 drop@128 outro@202",
+      "clipLagSamples": 0,
+      "confidence": 0.73,
+      "ms": {
+        "render": 2870,
+        "analyse": 3487
+      }
+    },
+    {
+      "id": "t9",
+      "family": "ambient",
+      "metaBpm": 72,
+      "bpm": 96,
+      "bpmMatch": false,
+      "metaKey": "D maj",
+      "key": "D maj",
+      "keyMatch": true,
+      "dropBarError": 4,
+      "sections": "intro@0 build@20 drop@28 bass@32 drop@52 bass@56 build@60 drop@68 bass@76 drop@84 bass@88 drop@100 outro@104 silence@136",
+      "planned": "intro@0 build@16 drop@24 breakdown@40 build@48 drop@56 outro@86",
+      "clipLagSamples": 0,
+      "confidence": 0.03,
+      "ms": {
+        "render": 2189,
+        "analyse": 3258
+      }
+    },
+    {
+      "id": "t10",
+      "family": "downtempo",
+      "metaBpm": 84,
+      "bpm": 84,
+      "bpmMatch": true,
+      "metaKey": "A min",
+      "key": "A min",
+      "keyMatch": true,
+      "dropBarError": 0,
+      "sections": "intro@0 build@16 drop@24 breakdown@56 build@72 drop@80 outro@116",
+      "planned": "intro@0 build@16 drop@24 breakdown@56 build@72 drop@80 outro@114",
+      "clipLagSamples": 4,
+      "confidence": 0.34,
+      "ms": {
+        "render": 1681,
+        "analyse": 3262
+      }
+    },
+    {
+      "id": "t11",
+      "family": "ambient",
+      "metaBpm": 70,
+      "bpm": 93.23,
+      "bpmMatch": false,
+      "metaKey": "E min",
+      "key": "D maj",
+      "keyMatch": false,
+      "dropBarError": 4,
+      "sections": "intro@0 build@20 drop@28 bass@32 build@80 drop@104 outro@108 outro@172",
+      "planned": "intro@0 build@16 drop@24 breakdown@56 build@72 drop@80 outro@115",
+      "clipLagSamples": 0,
+      "confidence": 0.02,
+      "ms": {
+        "render": 2966,
+        "analyse": 4973
+      }
+    },
+    {
+      "id": "t12",
+      "family": "breaks",
+      "metaBpm": 96,
+      "bpm": 96,
+      "bpmMatch": true,
+      "metaKey": "C maj",
+      "key": "A maj",
+      "keyMatch": false,
+      "dropBarError": 0,
+      "sections": "intro@0 build@20 drop@24 breakdown@48 build@64 drop@72 outro@112",
+      "planned": "intro@0 build@16 drop@24 breakdown@48 build@64 drop@72 outro@106",
+      "clipLagSamples": 0,
+      "confidence": 0.53,
+      "ms": {
+        "render": 1301,
+        "analyse": 2835
+      }
+    },
+    {
+      "id": "t13",
+      "family": "ambient",
+      "metaBpm": 90,
+      "bpm": 89.65,
+      "bpmMatch": false,
+      "metaKey": "G maj",
+      "key": "G maj",
+      "keyMatch": true,
+      "dropBarError": -4,
+      "sections": "intro@0 build@16 drop@20 bass@24 build@68 drop@84 outro@88 silence@152",
+      "planned": "intro@0 build@16 drop@24 breakdown@64 build@80 drop@88 outro@137",
+      "clipLagSamples": 0,
+      "confidence": 0.01,
+      "ms": {
+        "render": 2858,
+        "analyse": 4858
+      }
+    },
+    {
+      "id": "t14",
+      "family": "ambient",
+      "metaBpm": 64,
+      "bpm": 85.05,
+      "bpmMatch": false,
+      "metaKey": "B min",
+      "key": "B min",
+      "keyMatch": true,
+      "dropBarError": 4,
+      "sections": "intro@0 build@20 drop@28 bass@32 drop@100 outro@108",
+      "planned": "intro@0 build@16 drop@24 breakdown@56 build@72 drop@80 outro@117",
+      "clipLagSamples": 0,
+      "confidence": 0.01,
+      "ms": {
+        "render": 3455,
+        "analyse": 5590
+      }
+    },
+    {
+      "id": "t15",
+      "family": "four",
+      "metaBpm": 121,
+      "bpm": 121,
+      "bpmMatch": true,
+      "metaKey": "C min",
+      "key": "E♭ maj",
+      "keyMatch": false,
+      "dropBarError": 0,
+      "sections": "intro@0 build@28 drop@32 breakdown@96 build@112 drop@120 outro@196",
+      "planned": "intro@0 build@24 drop@32 breakdown@96 build@112 drop@120 outro@185",
+      "clipLagSamples": 0,
+      "confidence": 0.79,
+      "ms": {
+        "render": 2943,
+        "analyse": 4756
+      }
+    },
+    {
+      "id": "t16",
+      "family": "four",
+      "metaBpm": 120,
+      "bpm": 120,
+      "bpmMatch": true,
+      "metaKey": "E♭ maj",
+      "key": "E♭ maj",
+      "keyMatch": true,
+      "dropBarError": 0,
+      "sections": "intro@0 build@28 drop@32 breakdown@96 build@112 drop@120 outro@204",
+      "planned": "intro@0 build@24 drop@32 breakdown@96 build@112 drop@120 outro@191",
+      "clipLagSamples": 0,
+      "confidence": 0.79,
+      "ms": {
+        "render": 3003,
+        "analyse": 4141
+      }
+    },
+    {
+      "id": "t17",
+      "family": "four",
+      "metaBpm": 119,
+      "bpm": 119,
+      "bpmMatch": true,
+      "metaKey": "G min",
+      "key": "B♭ maj",
+      "keyMatch": false,
+      "dropBarError": 0,
+      "sections": "intro@0 build@28 drop@32 breakdown@88 build@104 drop@112 outro@188",
+      "planned": "intro@0 build@24 drop@32 breakdown@88 build@104 drop@112 outro@174",
+      "clipLagSamples": 0,
+      "confidence": 0.66,
+      "ms": {
+        "render": 2683,
+        "analyse": 3737
+      }
+    },
+    {
+      "id": "t18",
+      "family": "afro",
+      "metaBpm": 122,
+      "bpm": 122,
+      "bpmMatch": true,
+      "metaKey": "A min",
+      "key": "F maj",
+      "keyMatch": false,
+      "dropBarError": 0,
+      "sections": "intro@0 build@36 drop@40 breakdown@104 build@120 drop@128 outro@220",
+      "planned": "intro@0 build@32 drop@40 breakdown@104 build@120 drop@128 outro@205",
+      "clipLagSamples": 0,
+      "confidence": 0.76,
+      "ms": {
+        "render": 2811,
+        "analyse": 4321
+      }
+    },
+    {
+      "id": "t19",
+      "family": "afro",
+      "metaBpm": 121,
+      "bpm": 121,
+      "bpmMatch": true,
+      "metaKey": "D min",
+      "key": "B♭ min",
+      "keyMatch": false,
+      "dropBarError": 0,
+      "sections": "intro@0 build@28 drop@32 breakdown@96 build@112 drop@120 outro@208",
+      "planned": "intro@0 build@24 drop@32 breakdown@96 build@112 drop@120 outro@197",
+      "clipLagSamples": 0,
+      "confidence": 0.76,
+      "ms": {
+        "render": 2706,
+        "analyse": 4139
+      }
+    },
+    {
+      "id": "t20",
+      "family": "afro",
+      "metaBpm": 123,
+      "bpm": 123,
+      "bpmMatch": true,
+      "metaKey": "F♯ min",
+      "key": "A maj",
+      "keyMatch": false,
+      "dropBarError": 0,
+      "sections": "intro@0 build@28 drop@32 breakdown@96 build@112 drop@120 outro@204",
+      "planned": "intro@0 build@24 drop@32 breakdown@96 build@112 drop@120 outro@190",
+      "clipLagSamples": 0,
+      "confidence": 0.74,
+      "ms": {
+        "render": 2487,
+        "analyse": 3752
+      }
+    },
+    {
+      "id": "t21",
+      "family": "techno",
+      "metaBpm": 152,
+      "bpm": 152,
+      "bpmMatch": true,
+      "metaKey": "C♯ min",
+      "key": "C♯ min",
+      "keyMatch": true,
+      "dropBarError": 0,
+      "sections": "intro@0 build@24 drop@32 breakdown@96 build@112 drop@120 outro@208 silence@220",
+      "planned": "intro@0 build@24 drop@32 breakdown@96 build@112 drop@120 outro@196",
+      "clipLagSamples": 0,
+      "confidence": 0.49,
+      "ms": {
+        "render": 2715,
+        "analyse": 3259
+      }
+    },
+    {
+      "id": "t22",
+      "family": "techno",
+      "metaBpm": 152,
+      "bpm": 152,
+      "bpmMatch": true,
+      "metaKey": "C♯ min",
+      "key": "C♯ min",
+      "keyMatch": true,
+      "dropBarError": 0,
+      "sections": "intro@0 build@24 drop@32 breakdown@104 build@120 drop@128 outro@216",
+      "planned": "intro@0 build@24 drop@32 breakdown@104 build@120 drop@128 outro@205",
+      "clipLagSamples": 4,
+      "confidence": 0.55,
+      "ms": {
+        "render": 2726,
+        "analyse": 3373
+      }
+    },
+    {
+      "id": "t23",
+      "family": "trance",
+      "metaBpm": 138,
+      "bpm": 138,
+      "bpmMatch": true,
+      "metaKey": "B♭ min",
+      "key": "B♭ min",
+      "keyMatch": true,
+      "dropBarError": 0,
+      "sections": "intro@0 build@32 drop@40 breakdown@120 build@136 drop@144 outro@248",
+      "planned": "intro@0 build@32 drop@40 breakdown@120 build@136 drop@144 outro@230",
+      "clipLagSamples": 4,
+      "confidence": 0.53,
+      "ms": {
+        "render": 3297,
+        "analyse": 4069
+      }
+    },
+    {
+      "id": "t24",
+      "family": "trance",
+      "metaBpm": 138,
+      "bpm": 138,
+      "bpmMatch": true,
+      "metaKey": "B♭ min",
+      "key": "B♭ min",
+      "keyMatch": true,
+      "dropBarError": 0,
+      "sections": "intro@0 build@44 drop@48 breakdown@144 build@160 drop@168 outro@292",
+      "planned": "intro@0 build@40 drop@48 breakdown@144 build@160 drop@168 outro@273",
+      "clipLagSamples": 0,
+      "confidence": 0.6,
+      "ms": {
+        "render": 3717,
+        "analyse": 4772
+      }
+    },
+    {
+      "id": "t25",
+      "family": "dnb",
+      "metaBpm": 174,
+      "bpm": 174,
+      "bpmMatch": true,
+      "metaKey": "F min",
+      "key": "F min",
+      "keyMatch": true,
+      "dropBarError": 0,
+      "sections": "intro@0 build@32 drop@40 breakdown@104 bass@116 build@120 drop@128 bass@208 drop@212 outro@224",
+      "planned": "intro@0 build@32 drop@40 breakdown@104 build@120 drop@128 outro@207",
+      "clipLagSamples": 0,
+      "confidence": 0.48,
+      "ms": {
+        "render": 1544,
+        "analyse": 2797
+      }
+    },
+    {
+      "id": "t26",
+      "family": "dnb",
+      "metaBpm": 174,
+      "bpm": 174,
+      "bpmMatch": true,
+      "metaKey": "A min",
+      "key": "E min",
+      "keyMatch": false,
+      "dropBarError": 0,
+      "sections": "intro@0 build@24 drop@32 breakdown@104 bass@116 build@120 drop@128 bass@204 drop@208 outro@216",
+      "planned": "intro@0 build@24 drop@32 breakdown@104 build@120 drop@128 outro@202",
+      "clipLagSamples": 0,
+      "confidence": 0.49,
+      "ms": {
+        "render": 1489,
+        "analyse": 2635
+      }
+    },
+    {
+      "id": "t27",
+      "family": "dnb",
+      "metaBpm": 175,
+      "bpm": 175,
+      "bpmMatch": true,
+      "metaKey": "E min",
+      "key": "E min",
+      "keyMatch": true,
+      "dropBarError": 0,
+      "sections": "intro@0 build@24 drop@32 breakdown@96 bass@108 build@112 drop@120 bass@192 drop@196 outro@204",
+      "planned": "intro@0 build@24 drop@32 breakdown@96 build@112 drop@120 outro@193",
+      "clipLagSamples": 4,
+      "confidence": 0.49,
+      "ms": {
+        "render": 1440,
+        "analyse": 2546
+      }
+    },
+    {
+      "id": "t28",
+      "family": "garage",
+      "metaBpm": 132,
+      "bpm": 132,
+      "bpmMatch": true,
+      "metaKey": "G min",
+      "key": "G min",
+      "keyMatch": true,
+      "dropBarError": 0,
+      "sections": "intro@0 build@24 drop@32 breakdown@80 build@96 drop@104 bass@152 drop@156 outro@164 silence@176",
+      "planned": "intro@0 build@24 drop@32 breakdown@80 build@96 drop@104 outro@152",
+      "clipLagSamples": 4,
+      "confidence": 0.31,
+      "ms": {
+        "render": 1490,
+        "analyse": 2689
+      }
+    },
+    {
+      "id": "t29",
+      "family": "garage",
+      "metaBpm": 132,
+      "bpm": 132,
+      "bpmMatch": true,
+      "metaKey": "G min",
+      "key": "B♭ maj",
+      "keyMatch": false,
+      "dropBarError": 0,
+      "sections": "intro@0 build@24 drop@32 breakdown@80 build@96 drop@104 bass@164 drop@168 outro@176 outro@188",
+      "planned": "intro@0 build@24 drop@32 breakdown@80 build@96 drop@104 outro@165",
+      "clipLagSamples": 0,
+      "confidence": 0.33,
+      "ms": {
+        "render": 1656,
+        "analyse": 2888
+      }
+    },
+    {
+      "id": "t30",
+      "family": "four",
+      "metaBpm": 126,
+      "bpm": 126,
+      "bpmMatch": true,
+      "metaKey": "A min",
+      "key": "A min",
+      "keyMatch": true,
+      "dropBarError": 0,
+      "sections": "intro@0 build@28 drop@32 breakdown@88 build@104 drop@112 outro@192",
+      "planned": "intro@0 build@24 drop@32 breakdown@88 build@104 drop@112 outro@181",
+      "clipLagSamples": 0,
+      "confidence": 0.72,
+      "ms": {
+        "render": 2540,
+        "analyse": 3532
+      }
+    },
+    {
+      "id": "t31",
+      "family": "four",
+      "metaBpm": 127,
+      "bpm": 127,
+      "bpmMatch": true,
+      "metaKey": "E min",
+      "key": "E min",
+      "keyMatch": true,
+      "dropBarError": 0,
+      "sections": "intro@0 build@28 drop@32 breakdown@88 build@104 drop@112 outro@188 silence@200",
+      "planned": "intro@0 build@24 drop@32 breakdown@88 build@104 drop@112 outro@176",
+      "clipLagSamples": 0,
+      "confidence": 0.71,
+      "ms": {
+        "render": 2476,
+        "analyse": 3471
+      }
+    },
+    {
+      "id": "t32",
+      "family": "four",
+      "metaBpm": 126,
+      "bpm": 126,
+      "bpmMatch": true,
+      "metaKey": "D min",
+      "key": "D min",
+      "keyMatch": true,
+      "dropBarError": 0,
+      "sections": "intro@0 build@28 drop@32 breakdown@96 build@112 drop@120 outro@200 silence@212",
+      "planned": "intro@0 build@24 drop@32 breakdown@96 build@112 drop@120 outro@188",
+      "clipLagSamples": 0,
+      "confidence": 0.69,
+      "ms": {
+        "render": 2583,
+        "analyse": 3633
+      }
+    },
+    {
+      "id": "t33",
+      "family": "synth",
+      "metaBpm": 104,
+      "bpm": 104,
+      "bpmMatch": true,
+      "metaKey": "A min",
+      "key": "D min",
+      "keyMatch": false,
+      "dropBarError": 0,
+      "sections": "intro@0 build@20 drop@24 breakdown@48 build@64 drop@72 bass@104 drop@108 outro@112",
+      "planned": "intro@0 build@16 drop@24 breakdown@48 build@64 drop@72 outro@105",
+      "clipLagSamples": 0,
+      "confidence": 0.69,
+      "ms": {
+        "render": 1321,
+        "analyse": 2444
+      }
+    },
+    {
+      "id": "t34",
+      "family": "synth",
+      "metaBpm": 98,
+      "bpm": 98,
+      "bpmMatch": true,
+      "metaKey": "D min",
+      "key": "D min",
+      "keyMatch": true,
+      "dropBarError": 0,
+      "sections": "intro@0 build@20 drop@24 breakdown@48 build@64 drop@72 bass@108 drop@112 outro@116",
+      "planned": "intro@0 build@16 drop@24 breakdown@48 build@64 drop@72 outro@107",
+      "clipLagSamples": 0,
+      "confidence": 0.69,
+      "ms": {
+        "render": 1403,
+        "analyse": 2575
+      }
+    },
+    {
+      "id": "t35",
+      "family": "synth",
+      "metaBpm": 110,
+      "bpm": 110,
+      "bpmMatch": true,
+      "metaKey": "E min",
+      "key": "B min",
+      "keyMatch": false,
+      "dropBarError": 0,
+      "sections": "intro@0 build@20 drop@24 breakdown@48 build@64 drop@72 bass@104 drop@108 outro@112 silence@120",
+      "planned": "intro@0 build@16 drop@24 breakdown@48 build@64 drop@72 outro@104",
+      "clipLagSamples": 0,
+      "confidence": 0.68,
+      "ms": {
+        "render": 1270,
+        "analyse": 2325
+      }
+    },
+    {
+      "id": "t36",
+      "family": "halftime",
+      "metaBpm": 150,
+      "bpm": 149.99,
+      "bpmMatch": true,
+      "metaKey": "F maj",
+      "key": "F maj",
+      "keyMatch": true,
+      "dropBarError": -20,
+      "sections": "intro@0 drop@4 breakdown@64 build@80 drop@88 bass@132 drop@136 silence@148",
+      "planned": "intro@0 build@16 drop@24 breakdown@64 build@80 drop@88 outro@132",
+      "clipLagSamples": 0,
+      "confidence": 0.37,
+      "ms": {
+        "render": 983,
+        "analyse": 2104
+      }
+    },
+    {
+      "id": "t37",
+      "family": "breaks",
+      "metaBpm": 92,
+      "bpm": 92,
+      "bpmMatch": true,
+      "metaKey": "C maj",
+      "key": "A maj",
+      "keyMatch": false,
+      "dropBarError": 0,
+      "sections": "intro@0 build@20 drop@24 breakdown@48 build@64 drop@72 outro@116",
+      "planned": "intro@0 build@16 drop@24 breakdown@48 build@64 drop@72 outro@110",
+      "clipLagSamples": 0,
+      "confidence": 0.52,
+      "ms": {
+        "render": 1298,
+        "analyse": 2843
+      }
+    },
+    {
+      "id": "t38",
+      "family": "dnb",
+      "metaBpm": 174,
+      "bpm": 174,
+      "bpmMatch": true,
+      "metaKey": "D min",
+      "key": "A min",
+      "keyMatch": false,
+      "dropBarError": 0,
+      "sections": "intro@0 build@24 drop@32 breakdown@96 bass@108 build@112 drop@120 bass@196 drop@200 outro@208",
+      "planned": "intro@0 build@24 drop@32 breakdown@96 build@112 drop@120 outro@197",
+      "clipLagSamples": 0,
+      "confidence": 0.44,
+      "ms": {
+        "render": 1486,
+        "analyse": 2676
+      }
+    },
+    {
+      "id": "t39",
+      "family": "garage",
+      "metaBpm": 134,
+      "bpm": 134,
+      "bpmMatch": true,
+      "metaKey": "B♭ min",
+      "key": "B♭ min",
+      "keyMatch": true,
+      "dropBarError": 0,
+      "sections": "intro@0 build@24 drop@32 breakdown@80 build@96 drop@104 bass@152 drop@156 outro@164 outro@176",
+      "planned": "intro@0 build@24 drop@32 breakdown@80 build@96 drop@104 outro@153",
+      "clipLagSamples": 0,
+      "confidence": 0.35,
+      "ms": {
+        "render": 1556,
+        "analyse": 2808
+      }
+    },
+    {
+      "id": "t40",
+      "family": "halftime",
+      "metaBpm": 140,
+      "bpm": 139.99,
+      "bpmMatch": true,
+      "metaKey": "G min",
+      "key": "F maj",
+      "keyMatch": false,
+      "dropBarError": 0,
+      "sections": "intro@0 build@24 drop@32 breakdown@72 build@88 drop@96 bass@144 drop@148 outro@156 silence@168",
+      "planned": "intro@0 build@24 drop@32 breakdown@72 build@88 drop@96 outro@144",
+      "clipLagSamples": 0,
+      "confidence": 0.46,
+      "ms": {
+        "render": 1119,
+        "analyse": 2539
+      }
+    },
+    {
+      "id": "t41",
+      "family": "breaks",
+      "metaBpm": 130,
+      "bpm": 130,
+      "bpmMatch": true,
+      "metaKey": "E min",
+      "key": "E maj",
+      "keyMatch": false,
+      "dropBarError": 0,
+      "sections": "intro@0 build@28 drop@32 breakdown@80 build@96 drop@104 outro@172",
+      "planned": "intro@0 build@24 drop@32 breakdown@80 build@96 drop@104 outro@158",
+      "clipLagSamples": 0,
+      "confidence": 0.57,
+      "ms": {
+        "render": 1598,
+        "analyse": 2869
+      }
+    },
+    {
+      "id": "t42",
+      "family": "techno",
+      "metaBpm": 130,
+      "bpm": 129.99,
+      "bpmMatch": true,
+      "metaKey": "A min",
+      "key": "A maj",
+      "keyMatch": false,
+      "dropBarError": 0,
+      "sections": "intro@0 build@16 drop@24 breakdown@56 build@72 drop@80 outro@120",
+      "planned": "intro@0 build@16 drop@24 breakdown@56 build@72 drop@80 outro@114",
+      "clipLagSamples": 0,
+      "confidence": 0.43,
+      "ms": {
+        "render": 1521,
+        "analyse": 2156
+      }
+    },
+    {
+      "id": "t43",
+      "family": "techno",
+      "metaBpm": 130,
+      "bpm": 129.99,
+      "bpmMatch": true,
+      "metaKey": "A min",
+      "key": "A min",
+      "keyMatch": true,
+      "dropBarError": 0,
+      "sections": "intro@0 build@16 drop@24 breakdown@56 build@72 drop@80 outro@120",
+      "planned": "intro@0 build@16 drop@24 breakdown@56 build@72 drop@80 outro@114",
+      "clipLagSamples": 0,
+      "confidence": 0.45,
+      "ms": {
+        "render": 1554,
+        "analyse": 2178
+      }
+    },
+    {
+      "id": "t44",
+      "family": "techno",
+      "metaBpm": 130,
+      "bpm": 129.99,
+      "bpmMatch": true,
+      "metaKey": "A min",
+      "key": "A maj",
+      "keyMatch": false,
+      "dropBarError": 0,
+      "sections": "intro@0 build@16 drop@24 breakdown@56 build@72 drop@80 outro@120",
+      "planned": "intro@0 build@16 drop@24 breakdown@56 build@72 drop@80 outro@114",
+      "clipLagSamples": 0,
+      "confidence": 0.43,
+      "ms": {
+        "render": 1588,
+        "analyse": 2155
+      }
+    },
+    {
+      "id": "t48",
+      "family": "disco",
+      "metaBpm": 118,
+      "bpm": 118,
+      "bpmMatch": true,
+      "metaKey": "F♯ min",
+      "key": "F♯ min",
+      "keyMatch": true,
+      "dropBarError": 0,
+      "sections": "intro@0 build@28 drop@32 breakdown@80 build@96 drop@104 outro@168",
+      "planned": "intro@0 build@24 drop@32 breakdown@80 build@96 drop@104 outro@155",
+      "clipLagSamples": 0,
+      "confidence": 0.73,
+      "ms": {
+        "render": 2559,
+        "analyse": 3383
+      }
+    },
+    {
+      "id": "t49",
+      "family": "disco",
+      "metaBpm": 118,
+      "bpm": 118,
+      "bpmMatch": true,
+      "metaKey": "F♯ min",
+      "key": "F♯ min",
+      "keyMatch": true,
+      "dropBarError": 0,
+      "sections": "intro@0 build@20 drop@24 breakdown@48 build@64 drop@72 outro@104 silence@112",
+      "planned": "intro@0 build@16 drop@24 breakdown@48 build@64 drop@72 outro@96",
+      "clipLagSamples": 0,
+      "confidence": 0.72,
+      "ms": {
+        "render": 1545,
+        "analyse": 2070
+      }
+    },
+    {
+      "id": "t50",
+      "family": "trance",
+      "metaBpm": 126,
+      "bpm": 126,
+      "bpmMatch": true,
+      "metaKey": "G♯ min",
+      "key": "C♯ min",
+      "keyMatch": false,
+      "dropBarError": 0,
+      "sections": "intro@0 build@32 drop@40 breakdown@112 build@128 drop@136 outro@224",
+      "planned": "intro@0 build@32 drop@40 breakdown@112 build@128 drop@136 outro@209",
+      "clipLagSamples": 1,
+      "confidence": 0.69,
+      "ms": {
+        "render": 2995,
+        "analyse": 4051
+      }
+    },
+    {
+      "id": "t51",
+      "family": "minimal",
+      "metaBpm": 127,
+      "bpm": 127,
+      "bpmMatch": true,
+      "metaKey": "C min",
+      "key": "B♭ min",
+      "keyMatch": false,
+      "dropBarError": 0,
+      "sections": "intro@0 build@24 drop@32 breakdown@96 build@112 drop@120 bass@200 drop@204 outro@212",
+      "planned": "intro@0 build@24 drop@32 breakdown@96 build@112 drop@120 outro@199",
+      "clipLagSamples": 4,
+      "confidence": 0.75,
+      "ms": {
+        "render": 1671,
+        "analyse": 3582
+      }
+    },
+    {
+      "id": "t52",
+      "family": "techno",
+      "metaBpm": 138,
+      "bpm": 138,
+      "bpmMatch": true,
+      "metaKey": "E min",
+      "key": "C♯ min",
+      "keyMatch": false,
+      "dropBarError": 0,
+      "sections": "intro@0 build@24 drop@32 breakdown@96 build@112 drop@120 outro@200 silence@212",
+      "planned": "intro@0 build@24 drop@32 breakdown@96 build@112 drop@120 outro@188",
+      "clipLagSamples": 0,
+      "confidence": 0.65,
+      "ms": {
+        "render": 2568,
+        "analyse": 3386
+      }
+    },
+    {
+      "id": "t53",
+      "family": "breaks",
+      "metaBpm": 136,
+      "bpm": 136,
+      "bpmMatch": true,
+      "metaKey": "E min",
+      "key": "A maj",
+      "keyMatch": false,
+      "dropBarError": 0,
+      "sections": "intro@0 build@28 drop@32 breakdown@104 build@120 drop@128 outro@216 silence@228",
+      "planned": "intro@0 build@24 drop@32 breakdown@104 build@120 drop@128 outro@204",
+      "clipLagSamples": 0,
+      "confidence": 0.57,
+      "ms": {
+        "render": 1880,
+        "analyse": 3497
+      }
+    },
+    {
+      "id": "t54",
+      "family": "four",
+      "metaBpm": 122,
+      "bpm": 122,
+      "bpmMatch": true,
+      "metaKey": "D♭ maj",
+      "key": "B♭ min",
+      "keyMatch": false,
+      "dropBarError": 0,
+      "sections": "intro@0 build@28 drop@32 breakdown@96 build@112 drop@120 outro@196 silence@208",
+      "planned": "intro@0 build@24 drop@32 breakdown@96 build@112 drop@120 outro@184",
+      "clipLagSamples": 0,
+      "confidence": 0.67,
+      "ms": {
+        "render": 2673,
+        "analyse": 3669
+      }
+    },
+    {
+      "id": "t55",
+      "family": "hardcore",
+      "metaBpm": 180,
+      "bpm": 180,
+      "bpmMatch": true,
+      "metaKey": "A min",
+      "key": "A maj",
+      "keyMatch": false,
+      "dropBarError": 0,
+      "sections": "intro@0 build@28 drop@32 breakdown@96 build@112 drop@120 outro@200",
+      "planned": "intro@0 build@24 drop@32 breakdown@96 build@112 drop@120 outro@186",
+      "clipLagSamples": 0,
+      "confidence": 0.84,
+      "ms": {
+        "render": 2104,
+        "analyse": 2629
+      }
+    },
+    {
+      "id": "t56",
+      "family": "breaks",
+      "metaBpm": 108,
+      "bpm": 108,
+      "bpmMatch": true,
+      "metaKey": "E maj",
+      "key": "E maj",
+      "keyMatch": true,
+      "dropBarError": 0,
+      "sections": "intro@0 build@20 drop@24 breakdown@64 build@80 drop@88 outro@136",
+      "planned": "intro@0 build@16 drop@24 breakdown@64 build@80 drop@88 outro@129",
+      "clipLagSamples": 0,
+      "confidence": 0.47,
+      "ms": {
+        "render": 1508,
+        "analyse": 2755
+      }
+    },
+    {
+      "id": "t57",
+      "family": "four",
+      "metaBpm": 124,
+      "bpm": 124,
+      "bpmMatch": true,
+      "metaKey": "E♭ min",
+      "key": "E♭ min",
+      "keyMatch": true,
+      "dropBarError": 0,
+      "sections": "intro@0 build@28 drop@32 breakdown@88 build@104 drop@112 outro@188 silence@200",
+      "planned": "intro@0 build@24 drop@32 breakdown@88 build@104 drop@112 outro@176",
+      "clipLagSamples": 0,
+      "confidence": 0.68,
+      "ms": {
+        "render": 2465,
+        "analyse": 3427
+      }
+    },
+    {
+      "id": "t58",
+      "family": "four",
+      "metaBpm": 124,
+      "bpm": 124,
+      "bpmMatch": true,
+      "metaKey": "E♭ min",
+      "key": "B♭ min",
+      "keyMatch": false,
+      "dropBarError": 0,
+      "sections": "intro@0 build@28 drop@32 breakdown@96 build@112 drop@120 outro@200",
+      "planned": "intro@0 build@24 drop@32 breakdown@96 build@112 drop@120 outro@187",
+      "clipLagSamples": 0,
+      "confidence": 0.69,
+      "ms": {
+        "render": 2667,
+        "analyse": 3529
+      }
+    },
+    {
+      "id": "t59",
+      "family": "breaks",
+      "metaBpm": 128,
+      "bpm": 128,
+      "bpmMatch": true,
+      "metaKey": "B min",
+      "key": "F♯ maj",
+      "keyMatch": false,
+      "dropBarError": 0,
+      "sections": "intro@0 build@24 drop@32 breakdown@80 build@96 drop@104 outro@176 silence@188",
+      "planned": "intro@0 build@24 drop@32 breakdown@80 build@96 drop@104 outro@164",
+      "clipLagSamples": 0,
+      "confidence": 0.56,
+      "ms": {
+        "render": 1576,
+        "analyse": 3000
+      }
+    },
+    {
+      "id": "t60",
+      "family": "four",
+      "metaBpm": 112,
+      "bpm": 112,
+      "bpmMatch": true,
+      "metaKey": "C♯ min",
+      "key": "C♯ min",
+      "keyMatch": true,
+      "dropBarError": 0,
+      "sections": "intro@0 build@20 drop@24 breakdown@56 build@72 drop@80 outro@128",
+      "planned": "intro@0 build@16 drop@24 breakdown@56 build@72 drop@80 outro@119",
+      "clipLagSamples": 1,
+      "confidence": 0.67,
+      "ms": {
+        "render": 1772,
+        "analyse": 2465
+      }
+    }
+  ]
+}
