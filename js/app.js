@@ -230,7 +230,14 @@
 
   /* ---------- Boot ---------- */
   function bootError(err) {
-    BF.$("#main").innerHTML = `<div class="container" style="padding-top:64px">${BF.ui.empty({ kind: "error", icon: "alert", title: "The store can’t be reached", body: BF.esc(err.message || "The server didn’t answer."), actions: `<button class="btn btn-primary" data-boot-retry>${I("refresh", "i-sm")} Try again</button>` })}</div>`;
+    // Opened straight from disk (file://): there is no server behind the page, so explain how to run it
+    const fromDisk = location.protocol === "file:";
+    BF.$("#main").innerHTML = `<div class="container" style="padding-top:64px">${BF.ui.empty({ kind: "error", icon: "alert",
+      title: fromDisk ? "Open TUNIBEAT through its server" : "The store can’t be reached",
+      body: fromDisk
+        ? "This page was opened as a file, so it can’t reach the TUNIBEAT server. In the project folder run <code>npm start</code>, then open <a class=\"link\" href=\"http://localhost:5173\">http://localhost:5173</a>."
+        : BF.esc(err.message || "The server didn’t answer."),
+      actions: fromDisk ? "" : `<button class="btn btn-primary" data-boot-retry>${I("refresh", "i-sm")} Try again</button>` })}</div>`;
     BF.$("[data-boot-retry]").onclick = () => start();
   }
   async function start() {
