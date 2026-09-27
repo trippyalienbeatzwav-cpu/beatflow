@@ -36,6 +36,23 @@ Production: `NODE_ENV=production DOWNLOAD_SECRET=… COOKIE_SECURE=true PAYMENTS
 
 `serve.ps1` still serves the static stores for a quick look, but Social and the preview audio need the Node server.
 
+## Deploy: Vercel (front end) + Render (server)
+
+Vercel serves the static site (`npm run build` → `dist/`, configured in `vercel.json`). It can't run the Node server (SQLite on disk, uploads, WebSockets, audio workers), so that runs on Render and Vercel forwards `/api` and `/media` to it (`middleware.js`). The browser stays on your Vercel domain, so cookies and CSRF work unchanged; live features open a WebSocket straight to Render with a one-time ticket.
+
+1. **Render** → New → **Blueprint** → this repository. `render.yaml` creates `beatflow-api` (Node 24, 5 GB disk at `/var/data`, health check `/api/health`, generated `DOWNLOAD_SECRET`). Fill in:
+   - `PROXY_SECRET`: 24+ random characters (you'll paste the same value into Vercel)
+   - `PUBLIC_URL`: your Vercel URL, e.g. `https://beatflow-blond.vercel.app`
+   - `RESEND_API_KEY` and `MAIL_FROM`: needed for sign-up verification codes and password resets
+   Disks need a paid instance (the blueprint uses `starter`). Note the service URL, e.g. `https://beatflow-api.onrender.com`.
+2. **Vercel** → Project → Settings → Environment Variables (Production):
+   - `API_ORIGIN` = the Render URL from step 1
+   - `PROXY_SECRET` = the same value as on Render
+   Then **Redeploy**. Until `API_ORIGIN` is set, `/api` answers `503 api_not_configured`.
+3. Check: `https://<your-vercel-domain>/api/health` returns `"ok": true` and `"via_proxy": true`.
+
+Card payments stay off until `PAYMENTS_PROVIDER=stripe` and the Stripe keys are set on Render; the catalog, previews, accounts and Social work without them. The demo catalog is seeded on first start (`SEED_DEMO=false` for an empty store); demo purchases are only seeded with the sandbox provider, so production never gets fake orders.
+
 ## Demo cheatsheet
 
 | Try | How |
@@ -156,5 +173,5 @@ Old links (`#/discover`, `#/beat/:id`, `#/release/:id`, `#/library/music`, …) 
 
 ## Production notes
 
-See [docs/BACKEND.md](docs/BACKEND.md#what-is-not-production-ready-and-why) for the full list. In short: SQLite single-process (PostgreSQL/Redis for scale), Stripe adapter not exercised against Stripe, sandbox payouts, development mail outbox only, WAV/AIFF-only uploads (no ffmpeg), no tax engine. License terms shown are producer-configured summaries; the agreement generated per order should be reviewed by counsel.
+See [docs/BACKEND.md](docs/BACKEND.md#what-is-not-production-ready-and-why) for the full list. In short: SQLite single-process (PostgreSQL/Redis for scale), Stripe adapter not exercised against Stripe, sandbox payouts, email via Resend (not yet exercised against the real service), WAV/AIFF-only uploads (no ffmpeg), no tax engine. License terms shown are producer-configured summaries; the agreement generated per order should be reviewed by counsel.
 # beatflow

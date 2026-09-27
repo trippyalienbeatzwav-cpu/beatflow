@@ -14,7 +14,7 @@ export default [
   { ignores: ["node_modules/**", "dist/**", "test-results/**", "server/data/**", "assets/**"] },
   js.configs.recommended,
   {
-    files: ["server/**/*.js", "scripts/**/*.mjs", "tests/**/*.js", "eslint.config.js"],
+    files: ["server/**/*.js", "scripts/**/*.mjs", "tests/**/*.js", "middleware.js", "eslint.config.js"],
     languageOptions: { ecmaVersion: 2024, sourceType: "module", globals: { ...globals.node } },
     rules: shared,
   },

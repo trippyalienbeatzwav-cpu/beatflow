@@ -288,11 +288,21 @@ export async function seed(S, { log = (..._args) => {} } = {}) {
   S.db.run("UPDATE users SET email_verified_at = created_at WHERE email_verified_at IS NULL");
   // ---- Stores (catalog, sellers, demo purchases) ----
   const storeCatalog = seedStoreCatalog(S, { log });
-  await seedStoreActivity(S, storeCatalog, { log });
+  await seedDemoActivity(S, storeCatalog, { log });
 
   S.limiter.setEnabled(limitsWereOn);
   S.limiter.reset();
   log(`seed: ${USERS.length} users, ${posts.length + 2} posts, ${STORIES.length} stories${hasMedia ? "" : " (no media)"}`);
+}
+
+/**
+ * Demo purchases, reviews and listening history are created through real sandbox checkouts, so they are only
+ * seeded when the sandbox payment provider is active (development). A production database gets the catalog
+ * and its imported counters, never fake orders or ledger entries.
+ */
+async function seedDemoActivity(S, cat, opts = {}) {
+  if (S.payments.name !== "sandbox") { opts.log?.(`seed: demo purchases skipped (payments provider: ${S.payments.name})`); return; }
+  await seedStoreActivity(S, cat, opts);
 }
 
 export async function seedIfEmpty(S, opts) {
@@ -301,7 +311,7 @@ export async function seedIfEmpty(S, opts) {
     if (S.db.get("SELECT COUNT(*) n FROM store_genres").n === 0) {
       const limitsWereOn = S.limiter.enabled;
       S.limiter.setEnabled(false);
-      try { const cat = seedStoreCatalog(S, opts); await seedStoreActivity(S, cat, opts); }
+      try { const cat = seedStoreCatalog(S, opts); await seedDemoActivity(S, cat, opts); }
       finally { S.limiter.setEnabled(limitsWereOn); }
     }
     return false;

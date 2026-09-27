@@ -47,7 +47,7 @@ server/
 - Email verification: 6-digit code, stored hashed, 30-minute expiry, 5 attempts per code, resend rate-limited. Selling requires a verified email.
 - Password reset: single-use token (hashed), 30 minutes, never reveals whether an email exists; resetting revokes every session.
 - Password change keeps only the current session; sessions can be listed and revoked individually.
-- Mail is delivered through a mail adapter. **In this repository the only adapter is the development outbox** (`GET /api/dev/mail`, dev tools only) — no SMTP/SES provider is wired.
+- Mail goes through an adapter: the development outbox (`GET /api/dev/mail`, dev tools only) or, in production, Resend (`RESEND_API_KEY` + `MAIL_FROM`). With neither, sign-up still succeeds but no verification code can be delivered.
 
 ## Data model (store)
 
@@ -89,9 +89,13 @@ Migrations: a new database is created from the schema files and stamped with the
 
 Chunked and resumable: `POST /api/media/uploads` (purpose, MIME, size — checked against per-purpose allow lists and limits) → `PUT …/chunks/:i` (out of order, retries) → `POST …/complete` (size and optional SHA-256 verified, content sniffed). Purposes `master_audio` (WAV/AIFF, 700 MB), `stems_archive` (ZIP, 1.5 GB; only WAV/AIFF/TXT/PDF entries, no path tricks), `artwork` (JPEG/PNG/WebP, dimensions read from the file). Masters and stems are stored privately; abandoned upload sessions expire and their partial files are deleted by a job (every 10 minutes).
 
+## Split hosting
+
+`middleware.js` (Vercel Routing Middleware) forwards `/api/*` and `/media/*` to `API_ORIGIN`, removes any client-supplied `x-tunibeat-proxy` / `x-tunibeat-client-ip`, and adds them itself when `PROXY_SECRET` is set. The server trusts the forwarded visitor IP only when that secret matches (constant-time compare), so rate limits stay per visitor instead of per Vercel edge; `/api/health` reports `via_proxy`. Email in production goes through Resend (`RESEND_API_KEY`, `MAIL_FROM`); delivery is asynchronous and failures are logged. Deployment steps: README → Deploy.
+
 ## Real-time
 
-WebSocket `/ws` (session cookie). Store events: `store:checkout` (buyer: payment settled), `store:sale` (seller), `earnings` (balance changes). Social uses the same hub for DMs, notifications, live rooms and presence.
+WebSocket `/ws`, authenticated by the session cookie (same origin) or, when the page is served from another origin (Vercel), by a one-time ticket from `POST /api/realtime/ticket` (random, single-use, 60 s, bound to the session; `/api/me` returns `env.realtime_url`). Store events: `store:checkout` (buyer: payment settled), `store:sale` (seller), `earnings` (balance changes). Social uses the same hub for DMs, notifications, live rooms and presence.
 
 ## API index (store, seller, auth)
 
@@ -113,7 +117,7 @@ Admin: `GET|POST /api/store/admin/genres`, `PATCH /api/store/admin/genres/:id`, 
 
 - **Database**: SQLite in one process. Fine for a single server; horizontal scaling needs PostgreSQL (not installed in this environment) and the in-memory rate limiter / job scheduling moved to Redis or the database.
 - **Payments**: the sandbox adapter is fully exercised by tests. The Stripe adapter exists but has not been run against Stripe (no keys here). Payouts are sandbox only.
-- **Email**: development outbox only; a real mail provider adapter is needed before launch.
+- **Email**: Resend adapter (tested with a mocked API; not yet exercised against Resend itself). Without a key, production can't deliver verification codes.
 - **Audio**: no ffmpeg in this environment, so only WAV/AIFF masters are accepted and MP3 is encoded in JavaScript (slower than native). Key detection is an estimate (about 24–50% exact on the synthetic catalog; tempo was exact on 38/38).
 - **Catalog audio**: the seeded catalog's audio is synthesised (original, generated from metadata). Real uploads go through the real pipeline.
 - **Tax**: `tax_cents` is always 0; no tax engine is integrated.

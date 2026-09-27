@@ -52,6 +52,33 @@ export function authenticate(S, req) {
   return { user, session };
 }
 
+/* ----- WebSocket tickets -----
+   When the page and the API are on different origins (front end on Vercel, API elsewhere), the session cookie
+   is not sent to the WebSocket host. The page asks for a ticket over the proxied API (cookie-authenticated),
+   then opens wss://…/ws?ticket=…. Tickets are random, single-use, expire after 60 s and point at the session,
+   so signing out or revoking the session also invalidates them. */
+const TICKET_TTL_MS = 60_000;
+function tickets(S) { return (S.wsTickets ??= new Map()); }
+export function issueSocketTicket(S, session) {
+  const t = token(), now = S.now(), map = tickets(S);
+  for (const [k, v] of map) if (v.exp < now) map.delete(k);   // prune expired
+  map.set(t, { tokenHash: session.token_hash, exp: now + TICKET_TTL_MS });
+  return t;
+}
+/** Authenticate a WebSocket upgrade: a ticket if present, otherwise the session cookie (same-origin). */
+export function authenticateSocket(S, req) {
+  const ticket = new URL(req.url, "http://local").searchParams.get("ticket");
+  if (!ticket) return authenticate(S, req);
+  const map = tickets(S), t = map.get(ticket);
+  map.delete(ticket);
+  if (!t || t.exp < S.now()) return null;
+  const session = S.db.get("SELECT * FROM sessions WHERE token_hash = ? AND expires_at > ?", t.tokenHash, S.now());
+  if (!session) return null;
+  const user = S.db.get("SELECT * FROM users WHERE id = ?", session.user_id);
+  if (!user || user.status !== "active") return null;
+  return { user, session };
+}
+
 function startSession(S, req, res, userId) {
   const t = token();
   const now = S.now();
@@ -229,9 +256,10 @@ export function register(r, S) {
     return { items: u ? S.db.all("SELECT id, subject, body, created_at FROM dev_outbox WHERE user_id = ? ORDER BY created_at DESC LIMIT 5", u.id) : [] };
   }, { public: true, dev: true });
 
-  r.get("/api/me", ({ user }) => ({ user: user ? selfUser(S, user.id) : null, env: { dev_tools: S.cfg.devTools, payments: { provider: S.payments.name, test_mode: S.payments.testMode, available: S.payments.available }, payouts: { provider: S.payouts.name, test_mode: S.payouts.testMode, available: S.payouts.available }, live: { transport: S.cfg.live.transport, ice_servers: S.cfg.live.iceServers, max_viewers: S.cfg.live.meshMaxViewers }, transcoder: S.transcoder.name, mail: S.mail.name } }), { public: true });
+  r.get("/api/me", ({ user }) => ({ user: user ? selfUser(S, user.id) : null, env: { dev_tools: S.cfg.devTools, payments: { provider: S.payments.name, test_mode: S.payments.testMode, available: S.payments.available }, payouts: { provider: S.payouts.name, test_mode: S.payouts.testMode, available: S.payouts.available }, live: { transport: S.cfg.live.transport, ice_servers: S.cfg.live.iceServers, max_viewers: S.cfg.live.meshMaxViewers }, transcoder: S.transcoder.name, mail: S.mail.name, realtime_url: S.cfg.realtimeUrl } }), { public: true });
+  r.post("/api/realtime/ticket", ({ session }) => ({ ticket: issueSocketTicket(S, session), url: S.cfg.realtimeUrl, expires_in: TICKET_TTL_MS / 1000 }));
 
-  r.get("/api/health", () => ({ ok: true, realtime: S.rt.stats(), audio: S.audio.stats(), time: S.now() }), { public: true });
+  r.get("/api/health", ({ req }) => ({ ok: true, via_proxy: !!req.tunibeatProxied, realtime: S.rt.stats(), audio: S.audio.stats(), time: S.now() }), { public: true });
 }
 
 /** Require a verified email for actions that move money out or publish for sale. */

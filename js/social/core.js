@@ -107,10 +107,23 @@
     const handlers = new Map();
     const subs = new Map();   // channel → refcount
     const emit = (t, m) => (handlers.get(t) ?? []).forEach((fn) => { try { fn(m); } catch (e) { console.error(e); } });
-    function open() {
+    let opening = false;
+    /** Same-origin /ws (cookie), or — when the API runs on another host — that host with a one-time ticket. */
+    async function socketUrl() {
+      const remote = SX.state.env?.realtime_url;
+      if (!remote) return `${location.protocol === "https:" ? "wss" : "ws"}://${location.host}/ws`;
+      const { ticket } = await SX.api.post("/api/realtime/ticket");
+      return `${remote}?ticket=${encodeURIComponent(ticket)}`;
+    }
+    async function open() {
       clearTimeout(timer);
+      if (!want || sock || opening) return;
+      opening = true;
+      let url;
+      try { url = await socketUrl(); } catch { opening = false; timer = setTimeout(open, Math.min(15_000, 500 * 2 ** attempt++)); return; }
+      opening = false;
       if (!want || sock) return;
-      sock = new WebSocket(`${location.protocol === "https:" ? "wss" : "ws"}://${location.host}/ws`);
+      sock = new WebSocket(url);
       sock.onopen = () => {
         attempt = 0;
         for (const ch of subs.keys()) sock.send(JSON.stringify({ t: "sub", ch }));

@@ -7,6 +7,7 @@ import { loadConfig } from "./config.js";
 import { openDb } from "./lib/db.js";
 import { Router, HttpError, sendJson, sendFile, safeJoin, readJson } from "./lib/http.js";
 import { createLimiter } from "./lib/ratelimit.js";
+import crypto from "node:crypto";
 import { createRealtime } from "./lib/realtime.js";
 import { createPaymentProvider } from "./adapters/payments.js";
 import { createPayoutProvider } from "./adapters/payouts.js";
@@ -60,7 +61,7 @@ export async function createApp(opts = {}) {
   };
   fs.mkdirSync(S.mediaDir, { recursive: true });
   S.mail = createMailer(S);
-  S.rt = createRealtime({ authenticate: (req) => auth.authenticate(S, req), log });
+  S.rt = createRealtime({ authenticate: (req) => auth.authenticateSocket(S, req), log });
 
   const router = new Router();
   for (const m of MODULES) m.register?.(router, S);
@@ -94,6 +95,18 @@ export async function createApp(opts = {}) {
     "media-src 'self' blob:" + (cfg.mediaBaseUrl ? " " + cfg.mediaBaseUrl : ""), "connect-src 'self' ws: wss:", "frame-ancestors 'none'", "base-uri 'none'", "form-action 'self'",
   ].join("; ");
 
+  /** The visitor's IP. Behind the Vercel proxy it arrives in a header, trusted only with the shared PROXY_SECRET. */
+  const proxySecret = cfg.proxySecret ? Buffer.from(cfg.proxySecret) : null;
+  function clientIp(req) {
+    const given = req.headers["x-tunibeat-proxy"];
+    if (proxySecret && typeof given === "string" && given.length === proxySecret.length && crypto.timingSafeEqual(Buffer.from(given), proxySecret)) {
+      req.tunibeatProxied = true;
+      const ip = String(req.headers["x-tunibeat-client-ip"] ?? "").trim();
+      if (/^[0-9a-f:.]{3,45}$/i.test(ip)) return ip;
+    }
+    return req.socket.remoteAddress;
+  }
+
   async function handle(req, res) {
     for (const [k, v] of Object.entries(SECURITY_HEADERS)) res.setHeader(k, v);
     const url = new URL(req.url, "http://local");
@@ -104,7 +117,7 @@ export async function createApp(opts = {}) {
       if (!hit) throw new HttpError(404, "not_found", "Unknown API endpoint.");
       if (hit.methodNotAllowed) throw new HttpError(405, "method_not_allowed", "Method not allowed.");
       const { route, params } = hit;
-      const ctx = { req, res, params, query: Object.fromEntries(url.searchParams), ip: req.socket.remoteAddress, S };
+      const ctx = { req, res, params, query: Object.fromEntries(url.searchParams), ip: clientIp(req), S };
       // CSRF: state-changing requests must carry a custom header, which browsers only allow same-origin (no CORS is enabled).
       // Provider webhooks are authenticated by signature instead.
       if (req.method !== "GET" && req.method !== "HEAD" && !route.opts.webhook && req.headers["x-tunibeat-csrf"] !== "1") {

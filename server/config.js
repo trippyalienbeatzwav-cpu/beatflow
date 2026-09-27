@@ -58,11 +58,24 @@ export function loadConfig(overrides = {}) {
       uploadTtlMs: 6 * 60 * 60 * 1000,
     },
     storyLifetimeMs: Number(env.STORY_LIFETIME_MS ?? 24 * 60 * 60 * 1000),
+    // Split hosting (front end on Vercel, this server elsewhere). The Vercel middleware adds the visitor's IP and
+    // this shared secret to every proxied request; only then is the forwarded IP trusted (rate limits, logs).
+    proxySecret: env.PROXY_SECRET || null,
+    // WebSocket endpoint when it isn't same-origin (Vercel can't proxy WebSockets). Browsers get a one-time
+    // ticket from /api/realtime/ticket and connect here directly. Render provides RENDER_EXTERNAL_URL.
+    realtimeUrl: env.PUBLIC_WS_URL || (env.RENDER_EXTERNAL_URL ? `${env.RENDER_EXTERNAL_URL.replace(/^http/, "ws").replace(/\/$/, "")}/ws` : null),
+    mail: {
+      provider: env.MAIL_PROVIDER || (env.RESEND_API_KEY ? "resend" : null),
+      resendApiKey: env.RESEND_API_KEY || null,
+      from: env.MAIL_FROM || null,
+    },
     ...overrides,
   };
   cfg.privateDir ??= path.join(cfg.dataDir, "private");
   // A per-process random secret would break every download link on restart and across servers
   if (production && !env.DOWNLOAD_SECRET && !overrides.downloadSecret) throw new Error("DOWNLOAD_SECRET must be set in production (32+ random bytes, hex).");
   if (production && String(cfg.downloadSecret).length < 32) throw new Error("DOWNLOAD_SECRET is too short (use 32+ random bytes, hex).");
+  if (cfg.proxySecret && String(cfg.proxySecret).length < 24) throw new Error("PROXY_SECRET is too short (use 24+ random characters).");
+  if (cfg.mail.provider === "resend" && (!cfg.mail.resendApiKey || !cfg.mail.from)) throw new Error("Resend mail needs RESEND_API_KEY and MAIL_FROM (e.g. \"TUNIBEAT <no-reply@yourdomain.com>\").");
   return cfg;
 }
